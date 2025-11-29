@@ -6,6 +6,23 @@ booking
 {% endblock %}
 
 {% block contend %}
-booking page
+<div class="container d-flex justify-content-center " style="margin-top: 200px;">
+    <div class="card shadow-lg p-4" style="max-width: 450px; width: 100%; border-radius: 20px;">
+        <h3 class="text-center mb-4 text-primary fw-bold">Book Your Slot</h3>
+
+        <form action="#" method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                {{ form.as_p }}
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold"
+                    style="border-radius: 10px; font-size: 18px;">
+                Book Now
+            </button>
+        </form>
+    </div>
+</div>
 
 {% endblock %}
